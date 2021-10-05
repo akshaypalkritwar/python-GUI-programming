@@ -1,8 +1,6 @@
 from tkinter import *
 from tkinter import messagebox
 import os
-# import sys
-
 root3 = Tk()
 
 user = StringVar()
@@ -16,11 +14,7 @@ class LoginP:
         self.photo1 = PhotoImage(file="login2.png")
         self.label1 = Label(self.frame, bg="#a64dff", image=self.photo1)
         self.label1.place(x=640, y=45)
-
-        # self.frame2 = Frame(self.frame, bg="#9933ff")
-        # self.frame2.place(x=0, y=330)
         self.photo2 = PhotoImage(file="exit.png")
-
         self.frame3 = Frame(self.frame, width=900, height=450, bg="#a64dff")
         self.username = Label(self.frame3, text="Username ", font="Consolas 30", bg="#a64dff")
         self.username.grid(row=0, column=1)
@@ -38,7 +32,7 @@ class LoginP:
         self.frame.pack()
 
     def Check(self):
-        if (user.get() == str("admin")) and (passw.get() == str("12345")):
+        if (user.get() == str("admin")) and (passw.get() == str("admin")):
             os.system('HomePage.py')
             root3.destroy()
         elif (user.get() == str("")) and (passw.get() == str("")):
