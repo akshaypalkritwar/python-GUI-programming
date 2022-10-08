@@ -35,8 +35,10 @@ class LoginP:
         if (user.get() == str("admin")) and (passw.get() == str("admin")):
             os.system('HomePage.py')
             root3.destroy()
-        elif (user.get() == str("")) and (passw.get() == str("")):
-            messagebox.showerror("error", "Please Input Username and password")
+        elif (user.get() == str(""))):
+            messagebox.showerror("error", "Please Input Username")
+        elif ((passw.get() == str("")):
+            messagebox.showerror("error", "Please Input password")
         else:
             messagebox.showerror("error", "Incorrect Username or password")
 
