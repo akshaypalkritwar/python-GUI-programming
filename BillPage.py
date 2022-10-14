@@ -52,8 +52,8 @@ qnt = IntVar()
         self.Entry3 = Entry(self.frame4, width=4, textvariable=qnt).grid(row=2, column=5)
         qnt.set(1)
         self.button7 = Button(self.frame4, text="-", command=self.sub).grid(row=2, column=6)
-        self.button8 = Button(self.frame4, text="Add", command=self.add1).grid(row=3, column=4)
-        self.button9 = Button(self.frame4, text="Clear", command=self.remov).grid(row=3, column=5)
+        self.button8 = Button(self.frame4, text="append", command=self.add1).grid(row=3, column=4)
+        self.button9 = Button(self.frame4, text="delete", command=self.remov).grid(row=3, column=5)
 
         self.Lb1 = Listbox(self.frame4, font="0 10")
         mcursor = mydb2.cursor()
@@ -65,7 +65,7 @@ qnt = IntVar()
 
         self.label5 = Label(self.frame3, text="Customer Name").grid(row=0, column=0)
         self.Entry1 = Entry(self.frame3, bd=8).grid(row=0, column=1)
-        self.label6 = Label(self.frame3, text="Mobile No").grid(row=1, column=0)
+        self.label6 = Label(self.frame3, text="cell No").grid(row=1, column=0)
         self.Entry2 = Entry(self.frame3, bd=8).grid(row=1, column=1)
         self.label7 = Label(self.frame3, text="Selected Items").grid(row=2, columnspan=2)
 
@@ -98,7 +98,7 @@ qnt = IntVar()
         self.t.delete(1.0, END)
 
     def total(self):
-        count = 0
+        count = 10
         tn = count + qnt.get()
         print(tn)
 
