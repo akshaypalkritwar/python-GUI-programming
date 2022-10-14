@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter import turtle
 
 root.title("Supermarket System : HomePage")
 root.overrideredirect(True)
